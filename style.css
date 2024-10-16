@@ -8,7 +8,7 @@
 
 :root {
     font-family: "Noto Sans", sans-serif;
-    font-size: 62.5%;
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
 
     --bg-color: #000;
     --text-color: #E1E1E6;
@@ -61,7 +61,7 @@ header {
     width: 35rem;
     height: 4.8rem;
 
-    border: 1px solid #ccc;
+    border: none;
     border-radius: .4rem;
     padding: 0 0.8rem;
 
@@ -101,4 +101,84 @@ header {
 .search button img {
     width: 2.4rem;
     height: 2.4rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table * {
+    font-size: 2rem;
+    color: #fff;
+}
+
+table th {
+    background: var(--table-color-one);
+    text-align: left;
+    font-weight: normal;
+    padding: 1.5rem;
+}
+
+table th:first-child {
+    border-top-left-radius: 1.2rem;
+}
+
+table th:last-child {
+    border-top-right-radius: 1.2rem;
+}
+
+table td:first-child {
+    border-bottom-left-radius: 1.2rem;
+}
+
+table td:last-child {
+    border-bottom-right-radius: 1.2rem;
+}
+
+table tr:nth-child(even) {
+    background: var(--table-color-one);
+}
+
+table tr:nth-child(odd) {
+    background: var(--table-color-two);
+}
+
+table td { 
+    padding: 1.5rem;
+    text-align: left;
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+    
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+td .remove {
+    background-color: transparent;
+    color: var(--remove-color);
+
+    border: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
 }
