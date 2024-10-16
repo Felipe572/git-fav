@@ -103,9 +103,11 @@ header {
     height: 2.4rem;
 }
 
+
 table {
     width: 100%;
     border-collapse: collapse;
+
 }
 
 table * {
@@ -128,13 +130,11 @@ table th:last-child {
     border-top-right-radius: 1.2rem;
 }
 
-table td:first-child {
-    border-bottom-left-radius: 1.2rem;
+tbody tr:last-child td:nth-child(4) {
+    border-radius: 0 0 1.2rem 0;
 }
 
-table td:last-child {
-    border-bottom-right-radius: 1.2rem;
-}
+
 
 table tr:nth-child(even) {
     background: var(--table-color-one);
@@ -181,4 +181,34 @@ td .remove {
     font-weight: bold;
 
     cursor: pointer;
+}
+
+.empty-state {
+    background-color: #4e5455;
+
+    display: flex;
+}
+
+.no-favs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+
+    margin: 21rem auto 28.7rem;
+}
+
+.no-favs img {
+    width: 13.2rem;
+    height: 12.5rem;
+}
+
+.no-favs h2 {
+    font-size: 4rem;
+    line-height: 2.5rem;
+    color: var(--text-color);
+}
+
+.hide {
+    display: none;
 }
